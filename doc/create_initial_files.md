@@ -143,7 +143,12 @@ A few things have to be taken into consideration:
 - Line 321: Setting the level and order (here 2 and 1)
 - Line 336: Bathymetry and ice shelf draft are transposed. This needs to be consistent with the order in which the bisicles plot file is read in ... If the result looks weird, this is a promising candidate
 - Line 402: If not otherwise specified, the bathymetry of the template file will be used, not the one from bisicles
-- Line 505: 
+
+Especially important here (From line 443):
+
+1. If there was open ocean before and now there is an ice shelf after the new BISICLES cycle, the ice shelf depth will be reduced to zero to open it again.
+2. If the newly opened ocean is too shallow, a statement will indicate that this is happening, but nothing happens.
+3. If there was an ice shelf before, but now there is not, grounded ice will be generated if the ocean is too shallow for a cavity, and an ice shelf will be generated if the ocean is deep enough for a cavity.
 
 ---
 
