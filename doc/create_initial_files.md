@@ -21,6 +21,9 @@ These files are:
 These files need to be created only once. 
 Subsequently, a part of the actual coupling code can be run.
 The following outlines how this works. 
+
+The coupling code, including the changes I made for this configuration, is here: `https://github.com/nicolasdettling/unicicles_coupling_refactor/tree/semi_coupling#` (on the branch `semi_coupling`).
+
 Generated output files can be found here: `/work/n02/shared/nicdet/NEMO_share/eANT025.AntArc/ice_coupling/`
 
 --- 
