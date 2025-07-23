@@ -180,6 +180,7 @@ The output should be ncfiles `domain_cfg.nc` and `mesh_mask.nc`. Logs are in `oc
 When the ice shelf draft changes, new open ocean cells can form.
 The initial conditions contain fill values (9999) in these newly created cells.
 Therefore, I replaced all fill values (9999) in the initial temperature and salinity fields with -1.9 °C and 34.4, respectively.
+Similarly, sea ice area, height, and snow height were set to zero instead of 9999.
 
 The new initial conditions are:
 
@@ -189,3 +190,11 @@ The new initial conditions are:
 ````
 
 Sea ice initial conditions remain unchanged.
+
+The other initial conditions are:
+
+- geothermal_heating.nc -> global field without nans interpolated to the configuration grid by nemo
+- runoff.nc -> zero everywhere
+- bergmelt.nc -> missing value is zero
+- chlorophyll.nc -> global field without nans interpolated to the configuration grid by nemo
+- empc.nc -> missing value is nan
